@@ -76,7 +76,7 @@ def printHeaderColor():
     print("")
 
 
-def printHeaderCenteLIGHTRED_EX():
+def printHeaderCentered():
     str_padding= " " * int((term_columns - 80) / 2)
     print(str_padding + " DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD        " + str_padding) 
     print(str_padding + " D:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::DDD     " + str_padding)
@@ -108,6 +108,41 @@ def printHeaderCenteLIGHTRED_EX():
     print(str_padding + " D:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::DDD      " + str_padding)
     print(str_padding + " DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD         " + str_padding)
     print("")
+
+
+def printHeaderCenteredColor():
+    str_padding= " " * int((term_columns - 80) / 2)
+    print(str_padding + Fore.LIGHTRED_EX + " DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD        ") 
+    print(str_padding + Fore.LIGHTRED_EX +" D" + Fore.LIGHTBLUE_EX + ":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::" + Fore.LIGHTRED_EX + "DDD     ")
+    print(str_padding + Fore.LIGHTRED_EX +" D" + Fore.LIGHTBLUE_EX + "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::" + Fore.LIGHTRED_EX + "DD   ")
+    print(str_padding + Fore.LIGHTRED_EX +" DDD" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D  ")
+    print(str_padding + Fore.LIGHTRED_EX +"   D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D                                                             D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D ")
+    print(str_padding + Fore.LIGHTRED_EX + "   D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D" + Fore.YELLOW + "     Program : " + str_program_name  + Fore.LIGHTRED_EX + "D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D")
+    print(str_padding + Fore.LIGHTRED_EX + "   D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D" + Fore.YELLOW + "     " + str_underline + Fore.LIGHTRED_EX + "D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D")
+    print(str_padding + Fore.LIGHTRED_EX + "   D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D                                                              D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D")
+    print(str_padding + Fore.LIGHTRED_EX + "   D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D      " + Fore.LIGHTGREEN_EX + "Author" + Fore.WHITE + " : " + Fore.LIGHTMAGENTA_EX  + str_author_name + Fore.LIGHTRED_EX + "D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D")
+    print(str_padding + Fore.LIGHTRED_EX + "   D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D                                                              D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D")
+    print(str_padding + Fore.LIGHTRED_EX + "   D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D      " + Fore.LIGHTGREEN_EX + "  Date" + Fore.WHITE + " :  " + Fore.CYAN +" [created] " + Fore.LIGHTMAGENTA_EX  + time.ctime(os.path.getctime(__file__)) + "           " + Fore.LIGHTRED_EX + "D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D")
+    print(str_padding + Fore.LIGHTRED_EX + "   D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D       " + Fore.CYAN + "          [updated] " + Fore.LIGHTMAGENTA_EX  + time.ctime(os.path.getmtime(__file__)) + "           " + Fore.LIGHTRED_EX + "D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D")
+    print(str_padding + Fore.LIGHTRED_EX + "   D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D                                                              D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D")
+    print(str_padding + Fore.LIGHTRED_EX + "   D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D     " + Fore.LIGHTGREEN_EX + "Description" + Fore.WHITE + " : " + Fore.LIGHTMAGENTA_EX  + str_descr1 + Fore.LIGHTRED_EX + "D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D")
+    if (len(descr2) > 1) : 
+        print(str_padding + Fore.LIGHTRED_EX + "   D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D                   " + Fore.LIGHTMAGENTA_EX  + str_descr2 + Fore.LIGHTRED_EX + "D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D")
+    if (len(descr3) > 1) : 
+        print(str_padding + Fore.LIGHTRED_EX + "   D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D                   " + Fore.LIGHTMAGENTA_EX  + str_descr3 + Fore.LIGHTRED_EX + "D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D")
+    if (len(descr4) > 1) : 
+        print(str_padding + Fore.LIGHTRED_EX + "   D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D                   " + Fore.LIGHTMAGENTA_EX  + str_descr4 + Fore.LIGHTRED_EX + "D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D")
+    if (len(descr5) > 1) : 
+        print(str_padding + Fore.LIGHTRED_EX + "   D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D                   " + Fore.LIGHTMAGENTA_EX  + str_descr5 + Fore.LIGHTRED_EX + "D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D")
+    print(str_padding + Fore.LIGHTRED_EX + "   D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D                                                              D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D ")
+    print(str_padding + Fore.LIGHTRED_EX + "   D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D                                                              D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D ")
+    print(str_padding + Fore.LIGHTRED_EX + "   D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D                                                             D" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D  ")
+    print(str_padding + Fore.LIGHTRED_EX + " DDD" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD" + Fore.LIGHTBLUE_EX + ":::::" + Fore.LIGHTRED_EX + "D   ")
+    print(str_padding + Fore.LIGHTRED_EX + " D" + Fore.LIGHTBLUE_EX + "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::" + Fore.LIGHTRED_EX + "DD    ")
+    print(str_padding + Fore.LIGHTRED_EX + " D" + Fore.LIGHTBLUE_EX + ":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::" + Fore.LIGHTRED_EX + "DDD      ")
+    print(str_padding + Fore.LIGHTRED_EX + " DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD         ")
+    print("")
+
 
 # INITS -----------------------------------------------------------------------------------------------
 (term_columns, term_rows) = os.get_terminal_size()
@@ -145,8 +180,9 @@ str_descr5=descr5 + (" " * (len_descr - len(descr5)))
 
 printHeader()
 
-printHeaderCenteLIGHTRED_EX()
+printHeaderCentered()
 
 
 
 printHeaderColor()
+printHeaderCenteredColor()
