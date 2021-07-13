@@ -1,4 +1,4 @@
-# Dynamic Pythom Header
+# Dynamic Python Header
 ## Color
 ![Screenshot](https://github.com/DavidLejeune/dynamic-python-header/blob/main/header-color.png)
 ## No Color
